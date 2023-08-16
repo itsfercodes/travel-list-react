@@ -1,7 +1,7 @@
 // eslint-disable-next-line react/prop-types
-function Item({ item: { id, description, quantity, packed } }) {
+function Item({ item: { description, quantity, packed } }) {
   return (
-    <li id={id}>
+    <li>
       <span style={packed ? { textDecoration: 'line-through' } : {}}>
         {quantity} {description}
       </span>
