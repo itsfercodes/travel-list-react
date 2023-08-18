@@ -41,7 +41,7 @@ module.exports = {
       {
         allow: 'single-child'
       }
-    ]
+    ],
   }
 };
 
