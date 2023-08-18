@@ -21,6 +21,15 @@ function TravelListApp() {
     );
   }
 
+  function handleResetItems() {
+    const confirmed = window.confirm(
+      'Are you sure you want to delete all the items?'
+    );
+
+    if (!confirmed) return;
+    setItems([]);
+  }
+
   return (
     <div className="app">
       <Logo />
@@ -29,6 +38,7 @@ function TravelListApp() {
         items={items}
         onDeleteItem={handleDeleteItem}
         onToggleItem={handleToggleItem}
+        onResetItems={handleResetItems}
       />
       <Stats items={items} />
     </div>

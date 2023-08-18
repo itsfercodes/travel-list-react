@@ -6,7 +6,7 @@ const INPUT = 'input';
 const DESCRIPTION = 'description';
 const PACKED = 'packed';
 
-function PackingList({ items, onDeleteItem, onToggleItem }) {
+function PackingList({ items, onDeleteItem, onToggleItem, onResetItems }) {
   const [sortBy, setSortBy] = useState(INPUT);
 
   let sortedItems;
@@ -41,6 +41,9 @@ function PackingList({ items, onDeleteItem, onToggleItem }) {
           <option value={DESCRIPTION}>Sort by description</option>
           <option value={PACKED}>Sort by packed status</option>
         </select>
+        <button type="button" onClick={onResetItems}>
+          Clear list
+        </button>
       </div>
     </div>
   );
